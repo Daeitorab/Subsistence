@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پرداخت مالیات</title>
+    <style>
+        body {
+            font-family: 'IRANSans', sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            border: 2px solid; /* خط نازک دور کادر */
+            border-image: linear-gradient(to right, #239F40, #239F40 33%, white 33%, white 66%, #DA0000 66%) 1;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333; /* رنگ متن ساده */
+        }
+        .user-info {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc; /* خط دور کادر اطلاعات کاربری ساده */
+        }
+        .user-info i {
+            font-size: 24px;
+            color: #555;
+        }
+        .tax-amount {
+            font-size: 24px; /* فونت مناسب و رسمی */
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000; /* مشکی برای متن مبلغ */
+        }
+        .pay-button {
+            background: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+            margin-top: 20px;
+        }
+        .pay-button:hover {
+            background: #ccc;
+            color: #000;
+        }
+        .footer {
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+        }
+        .status {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>سرپرست گرامی</h1>
+        <div class="user-info">
+            <i class="fas fa-user"></i>
+            <p>شاخص سیستم در حال بررسی مدارک شما</p>
+        </div>
+        <div class="tax-amount">
+            مبلغ مالیات تعیین شده: <br>۲۰۰,۰۰۰ تومان
+        </div>
+        <div class="status">
+            وضعیت: در حال بررسی، پرداخت تسهیلات انجام دهید.
+        </div>
+        <button class="pay-button" id="payButton">پرداخت مالیات</button>
+        <div class="footer">
+            این سامانه متعلق به سازمان هدفمندسازی یارانه‌ها می‌باشد.
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        // اضافه کردن event listener به دکمه پرداخت
+        document.getElementById('payButton').addEventListener('click', function() {
+            // تغییر مسیر به پوشه pay
+            window.location.href = '/pay';
+        });
+    </script>
+</body>
+</html>

